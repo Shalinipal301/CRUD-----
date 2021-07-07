@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Data Content</title>
+<h1>Data Content</h1>
+<script type="text/javascript">
+function addRows(){ 
+	var table = document.getElementById('emptbl');
+	var rowCount = table.rows.length;
+	var cellCount = table.rows[0].cells.length; 
+	var row = table.insertRow(rowCount);
+	for(var i =0; i <= cellCount; i++){
+		var cell = 'cell'+i;
+		cell = row.insertCell(i);
+		var copycel = document.getElementById('col'+i).innerHTML;
+		cell.innerHTML=copycel;
+		
+		}
+	}
+function deleteRows(){
+	var table = document.getElementById('emptbl');
+	var rowCount = table.rows.length;
+	if(rowCount > '2'){
+		var row = table.deleteRow(rowCount-1);
+		rowCount--;
+	}
+	else{
+		alert('There should be atleast one row');
+	}
+}
+</script>
+</head>
+<body>
+<form action="#" method="post">    
+	<table id="emptbl">
+		<tr>
+			<th>Employee Name</th>
+			<th>Phone</th>
+			<th>Department</th> 
+			
+		</tr> 
+		<tr> 
+			<td id="col0"><input type="text" name="empname[]" value="" /></td> 
+			<td id="col1"><input type="text" name="phone[]" value="" /></td> 
+			<td id="col2"><input type="text" name="Department[]" value="" /></td>
+			 
+	</table> 
+	<table> 
+		<tr> 
+			<td><input type="button" value="Add Row" onclick="addRows()" /></td> 
+			<td><input type="button" value="Delete Row" onclick="deleteRows()" /></td> 
+			<td><input type="submit" value="Submit" /></td> 
+		</tr>  
+        
+		
+        
+        {{#each machines}}
+        <form method="POST">
+        <tr>
+            <td>{{this.Employee Name}}</td>
+            <td>{{this.Phone}}</td>
+            <td>{{this.Department}}</td>
+
+        
+        </form>
+        
+            
+        </tr> 
+        {{/each}}
+	</table> 
+ </form> 
+</body> 
+</html>
+        
+	
+        
+       

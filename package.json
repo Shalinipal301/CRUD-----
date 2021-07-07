@@ -1,0 +1,20 @@
+{
+  "name": "web-template",
+  "version": "1.0.0",
+  "description": "web-template1 description",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "etilabs"
+  ],
+  "author": "ETI Labs",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.7.6",
+    "mongoose": "^5.13.0",
+    "parse": "^2.14.0"
+  }
+}

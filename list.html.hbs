@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>{{title}}</title>
+		<link rel="stylesheet" href="/wm1.css">
+	</head>
+	<body class="test">
+		<img src="/etilabs.png" style="height: 20%;"><br><br>
+		{{> products}}
+		<br>
+		{{> services}}
+		<br>
+		<form method="POST" action="/create">
+			<label class="" for="name">Enter something:</label>
+      		<input type="text" name="something" value="" required />
+			<button type="submit" >Submit</button>
+		</form>
+	</body>
+</html>
